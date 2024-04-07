@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 85435ce6697c341c89daa69df220f300
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - startPoint: {instanceID: 0}
+  - RainEffect: {fileID: 2650514528840296638, guid: 298dc5ec4ddd049858ee41bafd7e53f4, type: 3}
+  - SnowEffect: {fileID: 8842516089883977607, guid: 8ff57030da3894fef8eba0fa41d022d7, type: 3}
+  - Fire: {fileID: 3546841805646709722, guid: 8a9d2e6305a324a68a1eaa7c73440cce, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
