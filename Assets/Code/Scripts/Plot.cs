@@ -11,8 +11,14 @@ public class Plot : MonoBehaviour
     private GameObject turret;
     private Color startColor;
 
+
+
+    AudioManager audioManager;
+
+
     private void Start() {
         startColor = spriteRenderer.color;
+
     }
 
     private void OnMouseEnter() {
@@ -23,11 +29,16 @@ public class Plot : MonoBehaviour
         spriteRenderer.color = startColor;
     }
 
-    private void OnMouseDown() {
+    public void OnMouseDown() {
         if (turret != null) return;
         Tower currentTurret = BuildManager.main.GetSelectedTurret();
 
         if (currentTurret.price > LevelManager.main.coins) {
+            AudioManager audiomanager = GameObject.FindGameObjectWithTag("audio").GetComponent<AudioManager>();
+
+            audiomanager.PlaySFX(audiomanager.noCoins);
+
+
             Debug.Log("You cant afford this");
             return;
         }
@@ -35,5 +46,7 @@ public class Plot : MonoBehaviour
         LevelManager.main.subtractCoins(currentTurret.price);
 
         turret = Instantiate(currentTurret.prefab, transform.position, Quaternion.identity);
+
+
     }
 }

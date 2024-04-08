@@ -21,6 +21,10 @@ public class LevelManager : MonoBehaviour
     public GameObject SnowEffect;
     public GameObject Fire;
     public Image healthBar;
+    AudioManager audiomanager;
+
+
+
 
     private GameObject currentWeatherEffect;
     public float health = 100f;
@@ -71,6 +75,8 @@ public class LevelManager : MonoBehaviour
     {
         main = this;
         mainCamera = Camera.main;
+        audiomanager = GameObject.FindGameObjectWithTag("audio").GetComponent<AudioManager>();
+
     }
 
     void SpawnWeather(GameObject weatherEffect)

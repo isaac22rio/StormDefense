@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{42C81AED-4C8B-C3C3-43F3-B6C26D8CD90A}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Code/Scripts/EnemySpawner.cs">
+    <Files>
+      <File FileName="Assets/AudioManager.cs" Line="29" Column="33" />
+      <File FileName="Assets/Code/Scripts/LevelManager.cs" />
+      <File FileName="Assets/Code/Scripts/EnemySpawner.cs" Line="29" Column="1" />
+      <File FileName="Assets/Code/Scripts/Plot.cs" />
+      <File FileName="Assets/Code/Scripts/Enemy.cs" Line="25" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bd71bfbe-fdbc-4800-9f58-3f36e22fd84c" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

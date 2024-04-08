@@ -22,8 +22,14 @@ public class EnemySpawner : MonoBehaviour
     private int enemiesLeft;
     private bool spawning = false;
 
+
+
+    AudioManager audiomanager;
+
+
     private void Awake() {
         onEnemyDestroy.AddListener(EnemyDestroyed);
+
     }
 
     private void Start() {
@@ -50,6 +56,9 @@ public class EnemySpawner : MonoBehaviour
     }
 
     private void EndWave() {
+
+        audiomanager.PlaySFX(audiomanager.newWave);
+
         spawning = false;
         timeSinceLastSpawn = 0f;
         LevelManager.main.waveNum++;
@@ -85,7 +94,14 @@ public class EnemySpawner : MonoBehaviour
     }
 
     private IEnumerator StartWave() {
+
+
         yield return new WaitForSeconds(waveInterval);
+
+        AudioManager audiomanager = GameObject.FindGameObjectWithTag("audio").GetComponent<AudioManager>();
+
+
+        audiomanager.PlaySFX(audiomanager.newWave);
         spawning = true;
         enemiesLeft = EnemiesPerWave();
         Turret.onNewWave.Invoke();
