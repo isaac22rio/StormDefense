@@ -13,11 +13,13 @@ public class Plot : MonoBehaviour
 
 
 
-    AudioManager audioManager;
+    private AudioManager audiomanager;
 
+    public void Start() {
+        audiomanager = GameObject.FindGameObjectWithTag("audio").GetComponent<AudioManager>();
 
-    private void Start() {
         startColor = spriteRenderer.color;
+
 
     }
 
@@ -34,7 +36,6 @@ public class Plot : MonoBehaviour
         Tower currentTurret = BuildManager.main.GetSelectedTurret();
 
         if (currentTurret.price > LevelManager.main.coins) {
-            AudioManager audiomanager = GameObject.FindGameObjectWithTag("audio").GetComponent<AudioManager>();
 
             audiomanager.PlaySFX(audiomanager.noCoins);
 
@@ -46,6 +47,7 @@ public class Plot : MonoBehaviour
         LevelManager.main.subtractCoins(currentTurret.price);
 
         turret = Instantiate(currentTurret.prefab, transform.position, Quaternion.identity);
+        audiomanager.PlaySFX(audiomanager.placeTurret);
 
 
     }

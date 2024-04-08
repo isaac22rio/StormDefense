@@ -24,15 +24,19 @@ public class EnemySpawner : MonoBehaviour
 
 
 
-    AudioManager audiomanager;
+    public AudioManager audiomanager;
 
 
     private void Awake() {
+        audiomanager = GameObject.FindGameObjectWithTag("audio").GetComponent<AudioManager>();
+
         onEnemyDestroy.AddListener(EnemyDestroyed);
+
 
     }
 
     private void Start() {
+
         StartCoroutine(StartWave());
     }
 
@@ -98,7 +102,6 @@ public class EnemySpawner : MonoBehaviour
 
         yield return new WaitForSeconds(waveInterval);
 
-        AudioManager audiomanager = GameObject.FindGameObjectWithTag("audio").GetComponent<AudioManager>();
 
 
         audiomanager.PlaySFX(audiomanager.newWave);

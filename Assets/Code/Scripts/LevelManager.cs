@@ -21,7 +21,7 @@ public class LevelManager : MonoBehaviour
     public GameObject SnowEffect;
     public GameObject Fire;
     public Image healthBar;
-    AudioManager audiomanager;
+    private AudioManager audiomanager;
 
 
 
